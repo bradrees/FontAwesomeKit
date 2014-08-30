@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name         = "FontAwesomeKit"
-  s.version      = "2.1.7"
+  s.version      = "2.1.8"
   s.summary      = "Icon font library for iOS. Currently supports Font-Awesome, Foundation icons, Zocial, and ionicons"
-  s.homepage     = "https://github.com/PrideChung/FontAwesomeKit"
+  s.homepage     = "https://github.com/bradrees/FontAwesomeKit"
   s.screenshots  = "http://i.minus.com/i3vNn0fTwcJeI.png", "http://i.minus.com/ivKqhOLJLVvmJ.png"
   s.license      = 'MIT'
   s.author       = { "Pride Chung" => "pride.chung@gmail.com" }
-  s.source       = { :git => "https://github.com/PrideChung/FontAwesomeKit.git", :tag => '2.1.7' }
+  s.source       = { :git => "https://github.com/bradrees/FontAwesomeKit.git" }
   s.platform     = :ios, '6.0'
   s.ios.frameworks = 'UIKit', 'CoreText'
   s.source_files = 'FontAwesomeKit/FontAwesomeKit.h'
@@ -39,4 +39,10 @@ Pod::Spec.new do |s|
     ss.source_files = 'FontAwesomeKit/FAKIonIcons.{h,m}'
     ss.resource  = 'FontAwesomeKit/ionicons.ttf'
   end
+
+  s.subspec 'WeatherIcon' do |ss|
+      ss.dependency 'FontAwesomeKit/Core'
+      ss.source_files = 'FontAwesomeKit/FAKWeatherIcon.{h,m}'
+      ss.resource  = 'FontAwesomeKit/weathericons-regular-webfont.ttf'
+    end
 end
