@@ -9,11 +9,11 @@
 #ifndef DISABLE_WEATHERICON_AUTO_REGISTRATION
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self registerIconFontWithURL:[[NSBundle mainBundle] URLForResource:@"weathericons-regular-webfont" withExtension:@"tff"]];
+        [self registerIconFontWithURL:[[NSBundle mainBundle] URLForResource:@"weathericons-regular-webfont" withExtension:@"ttf"]];
     });
 #endif
 
-    UIFont *font = [UIFont fontWithName:@"weathericons" size:size];
+    UIFont *font = [UIFont fontWithName:@"Weather Icons" size:size];
     NSAssert(font, @"UIFont object should not be nil, check if the font file is added to the application bundle and you're using the correct font name.");
     return font;
 }
